@@ -98,13 +98,13 @@ const DynamicPortfolio = () => {
           { id: 'contact', ref: contactRef, Component: ContactSection }
         ].map(({ id, ref, Component }) => (
           <section 
-            key={id}
-            id={id}
-            ref={ref}
-            className={`min-h-screen w-full snap-start transition-colors duration-700 
-              flex items-center justify-center
-              ${isDarkTheme ? 'bg-black text-white' : 'bg-white text-black'}`}
-          >
+  key={id}
+  id={id}
+  ref={ref}
+  className={`min-h-screen w-full snap-start transition-colors duration-700 flex items-center justify-center ${
+    isDarkTheme ? 'bg-black text-white' : 'bg-white text-black'
+  }`}
+>
             <Component 
               isLoaded={isLoaded}
               currentTextIndex={currentTextIndex}
