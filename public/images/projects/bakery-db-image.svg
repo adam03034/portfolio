@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1a1a1a"/>
+  
+  <!-- Database Icons -->
+  <g transform="translate(100, 50)">
+    <!-- Database 1 -->
+    <path d="M0,20 C0,8 40,8 40,20 L40,60 C40,72 0,72 0,60 Z" fill="#3b82f6"/>
+    <path d="M0,20 C0,32 40,32 40,20" fill="none" stroke="#2563eb" stroke-width="1"/>
+    
+    <!-- Database 2 -->
+    <path d="M100,20 C100,8 140,8 140,20 L140,60 C140,72 100,72 100,60 Z" fill="#8b5cf6"/>
+    <path d="M100,20 C100,32 140,32 140,20" fill="none" stroke="#7c3aed" stroke-width="1"/>
+    
+    <!-- Connection Lines -->
+    <path d="M40,40 L100,40" stroke="#4b5563" stroke-width="2" stroke-dasharray="4"/>
+  </g>
+  
+  <!-- Table Structure -->
+  <g transform="translate(50, 150)">
+    <rect width="300" height="100" rx="5" fill="#2a2a2a"/>
+    
+    <!-- Table Header -->
+    <rect width="300" height="30" rx="5" fill="#374151"/>
+    <text x="20" y="20" fill="white" font-family="Arial" font-size="12">Products</text>
+    
+    <!-- Table Columns -->
+    <line x1="0" y1="30" x2="300" y2="30" stroke="#4b5563"/>
+    <text x="20" y="50" fill="#d1d5db" font-family="Arial" font-size="10">id</text>
+    <text x="120" y="50" fill="#d1d5db" font-family="Arial" font-size="10">name</text>
+    <text x="220" y="50" fill="#d1d5db" font-family="Arial" font-size="10">price</text>
+    
+    <!-- Table Row -->
+    <line x1="0" y1="60" x2="300" y2="60" stroke="#4b5563"/>
+    <text x="20" y="80" fill="white" font-family="Arial" font-size="10">1</text>
+    <text x="120" y="80" fill="white" font-family="Arial" font-size="10">Croissant</text>
+    <text x="220" y="80" fill="white" font-family="Arial" font-size="10">2.50</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="350" cy="50" r="20" fill="#22c55e" opacity="0.3"/>
+  <circle cx="380" cy="70" r="15" fill="#3b82f6" opacity="0.2"/>
+  <path d="M320,30 L340,50 L360,30" stroke="#8b5cf6" fill="none" stroke-width="2"/>
+</svg>
