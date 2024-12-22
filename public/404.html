@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script>
-      const path = window.location.pathname;
-      const baseUrl = '/portfolio/'; // Musí byť rovnaký ako v vite.config.js
-      window.location.href = baseUrl + '#' + path;
-    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
   </head>
   <body>
-    Redirecting...
+    <div id="root"></div>
+    <script type="module" src="/portfolio/src/main.jsx"></script>
   </body>
 </html>
