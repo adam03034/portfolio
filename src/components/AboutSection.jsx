@@ -146,7 +146,7 @@ const AboutSection = () => {
               />
             </a>
             <a
-              href="https://instagram.com/adam.wirth.35"
+              href="https://www.instagram.com/wirth_adam/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-black/5 hover:bg-pink-500/10 backdrop-blur-lg
