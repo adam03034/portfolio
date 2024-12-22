@@ -19,8 +19,11 @@ const Navigation = ({
       <div className="max-w-[1200px] mx-auto w-full px-4 sm:px-6 py-4 sm:py-6">
         <div className="flex justify-between items-center">
           <a
-            href="/"
-            className={`text-xl font-bold hover:opacity-70 transition-all duration-300
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('about');
+            }}
+            className={`text-xl font-bold hover:opacity-70 transition-all duration-300 cursor-pointer
               ${isDarkTheme ? 'text-white' : 'text-black'}`}
           >
             WIRTH STUDIO
