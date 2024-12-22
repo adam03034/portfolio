@@ -83,7 +83,7 @@ const AboutSection = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 
             opacity-10 rounded-2xl blur-xl transform group-hover:scale-110 transition-transform duration-500" />
           <img
-            src="/images/Adamko.jpeg"
+            src={`https://github.com/adam03034/portfolio/blob/main/public/images/Adamko.jpeg?raw=true`}
             alt="Profile"
             className="relative w-36 sm:w-48 h-48 sm:h-64 object-cover rounded-2xl transform transition-all duration-500 
               group-hover:scale-105 group-hover:shadow-xl"
