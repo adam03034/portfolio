@@ -9,10 +9,9 @@ const AboutSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   const dynamicTexts = [
-    "DIGITAL ARTIST",
     "SOFTWARE DEV",
-    "UI DESIGNER",
-    "UX DESIGNER"
+    "DIGITAL NOMAD",
+    "WEB DESIGNER"
   ];
 
   const simulateTypingWithError = async (text) => {
