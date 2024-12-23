@@ -5,7 +5,7 @@ export const projects = [
         id: 1,
         title: "Todo List Application",
         description: "Moderná Todo aplikácia vytvorená pomocou React a Vite s pokročilými funkciami pre efektívnu správu úloh.",
-        image: "images/projects/todo-dark.svg", // Tu budete potrebovať screenshot projektu
+        image: "images/projects/todo-list-icon.svg", // Tu budete potrebovať screenshot projektu
         githubUrl: "https://github.com/adam03034/TO-DO-LIST",
         technologies: [
             "React 18",
@@ -29,7 +29,7 @@ export const projects = [
         id: 2,
         title: "Prezentácia DB",
         description: "Projekt vytvorený ako záverečná práca pre predmet Databázové systémy. Implementuje interaktívnu prezentáciu pomocou React a moderných webových technológií.",
-        image: "images/projects/bakery-db-image.svg", // Tu budete potrebovať screenshot projektu
+        image: "images/projects/database-icon.svg", // Tu budete potrebovať screenshot projektu
         githubUrl: "https://github.com/adam03034/bakery",
         technologies: [
             "React",

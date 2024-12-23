@@ -16,10 +16,9 @@ const PortfolioSection = ({ portfolioRef }) => {
       <div className="max-w-[1200px] w-full mx-auto px-4 sm:px-6 py-12 sm:py-20">
         {/* Centered Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 
-            bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Portfolio
-          </h2>
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
+  Portfolio
+</h2>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Check out some of my recent projects. Click on any project to view details.
           </p>

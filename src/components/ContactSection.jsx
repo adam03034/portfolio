@@ -79,10 +79,9 @@ const ContactSection = () => {
     <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 
-          bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-          Get in Touch
-        </h2>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 text-black">
+  Get in Touch
+</h2>
         <p className="text-base sm:text-lg opacity-80 max-w-2xl mx-auto">
           Have a question or want to work together? I'd love to hear from you.
           Let's create something amazing together.
@@ -175,15 +174,15 @@ const ContactSection = () => {
         </div>
 
         <button
-          type="submit"
-          disabled={submitting}
-          className={`w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500
-            text-white font-semibold transform hover:scale-105 transition-all duration-300
-            disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed
-            hover:shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-        >
-          {submitting ? 'Sending...' : 'Send Message'}
-        </button>
+  type="submit"
+  disabled={submitting}
+  className={`w-full sm:w-auto px-8 py-4 rounded-xl bg-black text-white font-semibold 
+    transform hover:scale-105 transition-all duration-300
+    disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed
+    hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black`}
+>
+  {submitting ? 'Sending...' : 'Send Message'}
+</button>
       </form>
     </div>
   );

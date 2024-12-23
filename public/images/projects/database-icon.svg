@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Tmavé pozadie -->
+  <rect width="400" height="400" rx="20" fill="#1C1C1C"/>
+  
+  <!-- Text "DATABASE" -->
+  <text
+    x="200"
+    y="210"
+    font-family="Arial, sans-serif"
+    font-size="48"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    DATABASE
+  </text>
+</svg>
