@@ -121,9 +121,12 @@ const AboutSection = () => {
               href="/path/to/resume.pdf"
               download
               className="flex items-center justify-center gap-2 px-6 py-2 rounded-xl 
-                bg-gray-100 hover:bg-gray-200 transition-all duration-300"
+                bg-gray-100 hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 group"
             >
-              <FileText size={18} className="text-gray-600" />
+              <FileText 
+                size={18} 
+                className="text-gray-600 group-hover:text-gray-900 transition-colors duration-300"
+              />
               <span>Resume</span>
             </a>
 
@@ -133,25 +136,37 @@ const AboutSection = () => {
                 href="https://github.com/adam03034"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-xl bg-gray-100 transition-all duration-300"
+                className="p-2.5 rounded-xl bg-black/5 hover:bg-black/10 backdrop-blur-lg
+                  transform hover:scale-110 transition-all duration-300 group"
               >
-                <Github size={20} className="text-gray-600" />
+                <Github 
+                  size={20} 
+                  className="text-gray-600 group-hover:text-gray-900 transition-colors duration-300"
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/adam-wirth-983727254"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-xl bg-gray-100 transition-all duration-300"
+                className="p-2.5 rounded-xl bg-black/5 hover:bg-blue-500/10 backdrop-blur-lg
+                  transform hover:scale-110 transition-all duration-300 group"
               >
-                <Linkedin size={20} className="text-gray-600" />
+                <Linkedin 
+                  size={20} 
+                  className="text-gray-600 group-hover:text-blue-500 transition-colors duration-300"
+                />
               </a>
               <a
                 href="https://www.instagram.com/wirth_adam/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-xl bg-gray-100 transition-all duration-300"
+                className="p-2.5 rounded-xl bg-black/5 hover:bg-pink-500/10 backdrop-blur-lg
+                  transform hover:scale-110 transition-all duration-300 group"
               >
-                <Instagram size={20} className="text-gray-600" />
+                <Instagram 
+                  size={20} 
+                  className="text-gray-600 group-hover:text-pink-500 transition-colors duration-300"
+                />
               </a>
             </div>
           </div>
