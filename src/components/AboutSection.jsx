@@ -69,30 +69,33 @@ const AboutSection = () => {
   }, [currentTextIndex, isTyping, isLoaded]);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
+    <div className="w-full min-h-[120vh] flex items-start justify-center">
       <div className={`max-w-4xl w-full mx-auto px-6 py-20 flex flex-col transition-all duration-1000 
         ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
-        <div className="flex-grow flex flex-col items-center justify-center space-y-12 mb-24">
+        <div className="flex-grow flex flex-col items-center justify-start space-y-12">
           {/* Profile Image */}
-          <div className={`relative group transform transition-all duration-1000 
-            ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 
-              opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl" />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 
-              opacity-10 rounded-2xl blur-xl transform group-hover:scale-110 transition-transform duration-500" />
-            <img
-              src={`https://github.com/adam03034/portfolio/blob/main/public/images/Adamko.jpeg?raw=true`}
-              alt="Profile"
-              className="relative w-48 h-64 object-cover rounded-2xl transform transition-all duration-500 
-                group-hover:scale-105 group-hover:shadow-xl"
-            />
+          <div className={`transform transition-all duration-1000 mt-12
+            ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          >
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 
+                opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 
+                opacity-10 rounded-2xl blur-xl transform group-hover:scale-110 transition-transform duration-500" />
+              <img
+                src={`https://github.com/adam03034/portfolio/blob/main/public/images/Adamko.jpeg?raw=true`}
+                alt="Profile"
+                className="relative w-48 h-64 object-cover rounded-2xl transform transition-all duration-500 
+                  group-hover:scale-105 group-hover:shadow-xl"
+              />
+            </div>
           </div>
 
           {/* Dynamic Text */}
-          <div className="text-center relative">
+          <div className="text-center relative min-h-[200px] flex flex-col items-center justify-center">
             <div className="relative">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 flex items-center justify-center gap-2">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 flex items-center justify-center gap-2">
                 <span className={`text-gray-400 transition-all duration-500 
                   ${curlyBracesVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
                   {"{"}
@@ -117,7 +120,7 @@ const AboutSection = () => {
           </div>
 
           {/* Social Links & Downloads */}
-          <div className={`flex flex-col items-center gap-8 transition-all duration-1000 delay-500 mt-8
+          <div className={`flex flex-col items-center gap-8 transition-all duration-1000 delay-500 mt-auto pt-8
             ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             {/* Social Links */}

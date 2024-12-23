@@ -102,6 +102,8 @@ const DynamicPortfolio = () => {
   id={id}
   ref={ref}
   className={`min-h-screen w-full snap-start transition-colors duration-700 flex items-center justify-center ${
+    id === 'portfolio' ? 'bg-black text-white' : 
+    id === 'contact' ? 'bg-white text-black' : 
     isDarkTheme ? 'bg-black text-white' : 'bg-white text-black'
   }`}
 >
