@@ -10,8 +10,7 @@ const AboutSection = () => {
   
   const dynamicTexts = [
     "DIGITAL ARTIST",
-    "CREATIVE DEVELOPER",
-    "PROBLEM SOLVER",
+    "SOFTWARE DEV",
     "UI/UX DESIGNER"
   ];
 
