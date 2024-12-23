@@ -18,7 +18,7 @@ const Navigation = ({
     <>
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50">
-        <div className={`backdrop-blur-[2px] transition-colors duration-500
+        <div className={`transition-colors duration-500
           ${isDarkTheme ? 'bg-black/40' : 'bg-white/40'}`}
         >
           <div className="max-w-[1200px] mx-auto w-full px-4 sm:px-6 py-4 sm:py-6">
