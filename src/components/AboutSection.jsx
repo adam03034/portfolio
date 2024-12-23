@@ -11,7 +11,8 @@ const AboutSection = () => {
   const dynamicTexts = [
     "DIGITAL ARTIST",
     "SOFTWARE DEV",
-    "UI/UX DESIGNER"
+    "UX DESIGNER",
+    "UI DESIGNER"
   ];
 
   const simulateTypingWithError = async (text) => {
