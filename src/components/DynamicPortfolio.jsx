@@ -21,20 +21,40 @@ const DynamicPortfolio = () => {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
+    
     const handleScroll = () => {
       const scrollPosition = container.scrollTop;
-      const windowHeight = window.innerHeight;
+      const windowHeight = container.clientHeight; // Zmenené z window.innerHeight
       const fullHeight = container.scrollHeight - windowHeight;
-      
       const progress = (scrollPosition / fullHeight) * 100;
       setScrollProgress(progress);
-
-      const sectionIndex = Math.round(scrollPosition / windowHeight);
-      setIsDarkTheme(sectionIndex % 2 !== 0);
+  
+      // Nová logika pre detekciu aktuálnej sekcie
+      const sections = ['about', 'portfolio', 'contact'];
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Ak je sekcia viditeľná aspoň z polovice
+          if (rect.top <= windowHeight/2 && rect.bottom >= windowHeight/2) {
+            // Portfolio sekcia má vždy čiernu, contact bielu, about závisí od pozície
+            if (sectionId === 'portfolio') {
+              setIsDarkTheme(true);
+            } else if (sectionId === 'contact') {
+              setIsDarkTheme(false);
+            } else {
+              // Pre about sekciu používame pôvodnú logiku
+              const sectionProgress = Math.abs(rect.top) / rect.height;
+              setIsDarkTheme(sectionProgress > 0.5);
+            }
+            break;
+          }
+        }
+      }
     };
-
+  
     container.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
     return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 

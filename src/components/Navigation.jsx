@@ -25,7 +25,7 @@ const Navigation = ({
                 e.preventDefault();
                 scrollToSection('about');
               }}
-              className={`text-xl font-bold cursor-pointer
+              className={`text-xl font-bold cursor-pointer transition-colors duration-300
                 ${isDarkTheme ? 'text-white' : 'text-black'}`}
             >
               WIRTH STUDIO
@@ -55,18 +55,16 @@ const Navigation = ({
         </div>
       </div>
 
-      {/* Menu Overlay with Right Side Animation */}
+      {/* Menu Overlay */}
       <div
         className={`fixed inset-0 transition-transform duration-700 ease-in-out z-[60]
           ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        {/* Black Background with Opacity Animation */}
-        <div 
+        <div
           className={`absolute inset-0 bg-black transition-opacity duration-700
             ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}
         />
-
-        {/* Close Button */}
+        
         <div className={`absolute top-6 right-6 z-[70] transition-transform duration-500 delay-300
           ${isMenuOpen ? 'translate-x-0 rotate-0' : 'translate-x-full rotate-180'}`}>
           <button
@@ -78,7 +76,6 @@ const Navigation = ({
           </button>
         </div>
 
-        {/* Menu Items with Staggered Animation */}
         <div className="h-full flex flex-col items-center justify-center relative z-[65]">
           {menuItems.map((item, index) => (
             <button
