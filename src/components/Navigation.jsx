@@ -16,7 +16,7 @@ const Navigation = ({
 
   return (
     <>
-      {/* Fixed Header - bez pozadia */}
+      {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50">
         <div className="max-w-[1200px] mx-auto w-full px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex justify-between items-center">
@@ -30,8 +30,8 @@ const Navigation = ({
             >
               WIRTH STUDIO
             </a>
-            
-            {/* Hamburger Menu */}
+
+            {/* Hamburger Menu Button */}
             {!isMenuOpen && (
               <button
                 onClick={() => setIsMenuOpen(true)}
@@ -39,12 +39,15 @@ const Navigation = ({
                 aria-label="Open menu"
               >
                 <div className="space-y-2">
-                  <div className={`w-8 h-0.5 transition-all duration-300
-                    ${isDarkTheme ? 'bg-white' : 'bg-black'}`} />
-                  <div className={`w-6 h-0.5 transition-all duration-300
-                    ${isDarkTheme ? 'bg-white' : 'bg-black'}`} />
-                  <div className={`w-8 h-0.5 transition-all duration-300
-                    ${isDarkTheme ? 'bg-white' : 'bg-black'}`} />
+                  <div className={`w-8 h-0.5 transform transition-all duration-300 origin-right
+                    ${isDarkTheme ? 'bg-white' : 'bg-black'}
+                    group-hover:scale-x-100 scale-x-100`} />
+                  <div className={`w-6 h-0.5 transform transition-all duration-300 origin-right
+                    ${isDarkTheme ? 'bg-white' : 'bg-black'}
+                    group-hover:scale-x-100 scale-x-75 ml-auto`} />
+                  <div className={`w-8 h-0.5 transform transition-all duration-300 origin-right
+                    ${isDarkTheme ? 'bg-white' : 'bg-black'}
+                    group-hover:scale-x-100 scale-x-100`} />
                 </div>
               </button>
             )}
@@ -52,13 +55,20 @@ const Navigation = ({
         </div>
       </div>
 
-      {/* Menu Overlay */}
+      {/* Menu Overlay with Right Side Animation */}
       <div
-        className={`fixed inset-0 bg-black transition-all duration-500 ease-in-out z-[60]
-          ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+        className={`fixed inset-0 transition-transform duration-700 ease-in-out z-[60]
+          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
+        {/* Black Background with Opacity Animation */}
+        <div 
+          className={`absolute inset-0 bg-black transition-opacity duration-700
+            ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+        />
+
         {/* Close Button */}
-        <div className="absolute top-6 right-6 z-[70]">
+        <div className={`absolute top-6 right-6 z-[70] transition-transform duration-500 delay-300
+          ${isMenuOpen ? 'translate-x-0 rotate-0' : 'translate-x-full rotate-180'}`}>
           <button
             onClick={() => setIsMenuOpen(false)}
             className="p-2 text-white transition-transform duration-300 hover:rotate-90"
@@ -67,19 +77,23 @@ const Navigation = ({
             <X size={24} />
           </button>
         </div>
-        
-        {/* Menu Items */}
-        <div className="h-full flex flex-col items-center justify-center">
-          {menuItems.map((item) => (
+
+        {/* Menu Items with Staggered Animation */}
+        <div className="h-full flex flex-col items-center justify-center relative z-[65]">
+          {menuItems.map((item, index) => (
             <button
               key={item.id}
               onClick={() => {
                 scrollToSection(item.id);
                 setIsMenuOpen(false);
               }}
-              className={`py-4 text-4xl sm:text-6xl lg:text-8xl transition-all duration-300
-                uppercase tracking-wider
+              className={`py-4 text-4xl sm:text-6xl lg:text-8xl transition-all duration-500
+                uppercase tracking-wider transform
+                ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
                 ${activeSection === item.id ? 'text-gray-400' : 'text-white'}`}
+              style={{
+                transitionDelay: `${index * 100 + 200}ms`
+              }}
             >
               {item.label}
             </button>
