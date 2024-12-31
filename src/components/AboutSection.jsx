@@ -117,7 +117,7 @@ const AboutSection = () => {
           <div className="flex flex-row items-center gap-4 sm:gap-6">
             {/* Resume Button */}
             <a
-              href="/path/to/resume.pdf"
+              href="pdfs/Adam Wirth - CV.pdf"
               download
               className="flex items-center justify-center gap-2 px-6 py-2 rounded-xl 
                 bg-gray-100 hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 group"
